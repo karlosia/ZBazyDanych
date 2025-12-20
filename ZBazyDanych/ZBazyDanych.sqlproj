@@ -135,6 +135,11 @@
     <Folder Include="Student_664\Tables\" />
     <Folder Include="233664\" />
     <Folder Include="233664\Tables\" />
+    <Folder Include="Student_4\" />
+    <Folder Include="Student_4\Views\" />
+    <Folder Include="Student_4\Functions\" />
+    <Folder Include="Student_4\User Defined Types\" />
+    <Folder Include="SalesLT\XMLSchemaCollections\" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\BuildVersion.sql">
@@ -235,5 +240,44 @@
     </Build>
     <Build Include="Security\Student_664.sql" />
     <Build Include="Security\233664.sql" />
+    <Build Include="SalesLT\Tables\ProductAttribute.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="233664\Tables\CustomerHistory.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="SalesLT\Views\v_CompareProductPrice.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="Student_4\Views\TheBestCustomers.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="Student_4\Functions\ufn_IsPriceHigherThanCurrent.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="Student_4\Functions\ufn_IsPriceHigher.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="Student_4\Functions\ufn_ProductsJson.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="Student_4\Functions\ufn_CalcAdjustedPrices.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="Student_4\Functions\ufn_PriceCheck.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="Student_4\User Defined Types\TopProductsType.sql" />
+    <Build Include="Security\Student_4.sql" />
+    <Build Include="SalesLT\XMLSchemaCollections\ProductAttributeSchema.sql" />
   </ItemGroup>
 </Project>
