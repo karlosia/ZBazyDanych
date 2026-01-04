@@ -140,6 +140,9 @@
     <Folder Include="Student_4\Functions\" />
     <Folder Include="Student_4\User Defined Types\" />
     <Folder Include="SalesLT\XMLSchemaCollections\" />
+    <Folder Include="Student_4\Stored Procedures\" />
+    <Folder Include="K4_surname\" />
+    <Folder Include="K4_surname\User Defined Types\" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\BuildVersion.sql">
@@ -279,5 +282,32 @@
     <Build Include="Student_4\User Defined Types\TopProductsType.sql" />
     <Build Include="Security\Student_4.sql" />
     <Build Include="SalesLT\XMLSchemaCollections\ProductAttributeSchema.sql" />
+    <Build Include="233664\Tables\ProductInventory.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Functions\fn_CheckCustomerExists.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="Student_4\Stored Procedures\usp_ProcessTopProducts.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\usp_SearchCustomers.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\usp_AddNewProduct.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\usp_AddCustomer.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="K4_surname\User Defined Types\TypNazwiska.sql" />
+    <Build Include="dbo\User Defined Types\SummaryTableType.sql" />
+    <Build Include="Security\K4_surname.sql" />
   </ItemGroup>
 </Project>

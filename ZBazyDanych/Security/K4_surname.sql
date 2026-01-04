@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [K4_surname]
+    AUTHORIZATION [dbo];
+
