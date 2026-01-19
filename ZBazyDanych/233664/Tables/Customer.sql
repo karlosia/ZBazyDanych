@@ -27,7 +27,22 @@ WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE=[233664].[CustomerHistory], DATA_CON
 
 
 
+
+
 GO
 CREATE NONCLUSTERED INDEX [IX_Customer_EmailAddress]
     ON [233664].[Customer]([EmailAddress] ASC);
 
+
+GO
+CREATE   TRIGGER [233664].trg_Customer_SimpleLog
+ON [233664].Customer
+AFTER DELETE
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    INSERT INTO SalesLT.DeletedCustomersLog (CustomerID, CompanyName)
+    SELECT d.CustomerID, d.CompanyName
+    FROM deleted d;
+END;

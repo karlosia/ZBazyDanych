@@ -143,6 +143,7 @@
     <Folder Include="Student_4\Stored Procedures\" />
     <Folder Include="K4_surname\" />
     <Folder Include="K4_surname\User Defined Types\" />
+    <Folder Include="Database Triggers\" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\BuildVersion.sql">
@@ -309,5 +310,25 @@
     <Build Include="K4_surname\User Defined Types\TypNazwiska.sql" />
     <Build Include="dbo\User Defined Types\SummaryTableType.sql" />
     <Build Include="Security\K4_surname.sql" />
+    <Build Include="SalesLT\Tables\ProductPriceHistory.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="SalesLT\Tables\Firma233664.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="SalesLT\Tables\DeletedCustomersLog.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Tables\DatabaseAuditLog.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="Database Triggers\trg_Database_SchemaAudit.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
   </ItemGroup>
 </Project>

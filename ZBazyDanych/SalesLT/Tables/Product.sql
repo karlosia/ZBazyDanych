@@ -28,3 +28,39 @@
     CONSTRAINT [AK_Product_rowguid] UNIQUE NONCLUSTERED ([rowguid] ASC)
 );
 
+
+GO
+
+CREATE TRIGGER SalesLT.trg_Product_UpdatePriceHistory
+ON SalesLT.Product
+AFTER UPDATE
+AS
+BEGIN
+SET NOCOUNT ON;
+INSERT INTO SalesLT.ProductPriceHistory (ProductID, OldPrice, NewPrice)
+SELECT i.ProductID, d.ListPrice AS OldPrice, i.ListPrice AS NewPrice
+    FROM inserted i
+    JOIN deleted d ON i.ProductID = d.ProductID
+    WHERE i.ListPrice <> d.ListPrice; 
+END;
+GO
+CREATE   TRIGGER SalesLT.trg_Product_PriceCheck
+ON SalesLT.Product
+AFTER UPDATE
+AS
+BEGIN
+    SET NOCOUNT ON;
+	
+    IF EXISTS (SELECT 1 
+        FROM inserted i
+        JOIN deleted d ON i.ProductID = d.ProductID
+        WHERE i.ListPrice > (d.ListPrice * 1.2))
+    BEGIN
+        INSERT INTO SalesLT.DeletedCustomersLog (CompanyName)
+        VALUES ('Proba podwyzki ceny o >20%');
+
+        ROLLBACK TRANSACTION;
+        
+        PRINT 'Operacja zablokowana';
+    END
+END;
